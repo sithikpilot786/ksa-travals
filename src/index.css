@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', 'Roboto', 'Inter', sans-serif;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 50%, #dbeafe 100%);
+  color: #1f2937;
+  overflow-x: hidden;
+  letter-spacing: 0.3px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+p {
+  line-height: 1.6;
+  letter-spacing: 0.2px;
+}
+
+/* Corporate Section Backgrounds */
+section {
+  position: relative;
+}
+
+section:nth-child(odd) {
+  background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);
+}
+
+section:nth-child(even) {
+  background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%);
+}
+
+/* Premium Glassmorphism & Shadow Systems */
+.glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(30, 64, 175, 0.15);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(30, 64, 175, 0.1);
+}
+
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 12px 48px 0 rgba(30, 64, 175, 0.15);
+}
+
+.glass-glow {
+  background: rgba(3, 105, 161, 0.05);
+  box-shadow: 0 0 40px rgba(3, 105, 161, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.shadow-premium {
+  box-shadow: 0 10px 35px -8px rgba(30, 64, 175, 0.12), 0 2px 4px -1px rgba(30, 64, 175, 0.05);
+}
+
+.shadow-premium-hover:hover {
+  box-shadow: 0 20px 45px -10px rgba(30, 64, 175, 0.2), 0 4px 6px -2px rgba(30, 64, 175, 0.1);
+}
+
+.shadow-glass {
+  box-shadow: 0 8px 32px 0 rgba(30, 64, 175, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.2) inset;
+}
+
+/* Gradient Button - Corporate Blue Accent */
+.gradient-btn {
+  @apply px-6 py-3 rounded-lg font-semibold transition-all duration-300;
+  background: linear-gradient(135deg, #1e40af 0%, #0369a1 100%);
+  color: #ffffff;
+}
+
+.gradient-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(30, 64, 175, 0.3);
+}
+
+/* Custom interactive dot pattern */
+.dot-pattern {
+  background-image: radial-gradient(rgba(30, 64, 175, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Premium Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f9ff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #1e40af 0%, #0369a1 100%);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #0369a1 0%, #075985 100%);
+}
+
+/* Corporate Card Styling */
+.corporate-card {
+  @apply rounded-lg border border-slate-200 bg-white shadow-sm hover:shadow-md transition-all duration-300;
+  backdrop-filter: blur(8px);
+}
+
+.corporate-card:hover {
+  @apply border-primary-main/30;
+}
